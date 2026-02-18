@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paawservice - Jasa Web & Service Center</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background: #f4f6f9;
+        color: #333;
+        transition: 0.4s;
+      }
+
+      .dark-mode {
+        background: #121212;
+        color: white;
+      }
+
+      header {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+      }
+
+      header h1 {
+        font-size: 45px;
+      }
+
+      header p {
+        margin: 15px 0;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        background: #25d366;
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+        background: #1ebe5d;
+      }
+
+      section {
+        padding: 70px 20px;
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 30px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+      }
+
+      .card {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition: 0.4s;
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      .dark-mode .card {
+        background: #1f1f1f;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        transition: 0.4s;
+      }
+
+      .card img:hover {
+        transform: scale(1.1);
+      }
+
+      .card.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      footer {
+        background: #203a43;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      /* Floating WhatsApp */
+      .floating-wa {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25d366;
+        color: white;
+        padding: 15px 18px;
+        border-radius: 50%;
+        font-size: 22px;
+        text-decoration: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+      }
+
+      .floating-wa:hover {
+        transform: scale(1.1);
+      }
+
+      /* Dark mode button */
+      .dark-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 8px 15px;
+        background: #203a43;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .logo-icon {
+        background: #25d366;
+        color: white;
+        font-size: 28px;
+        padding: 15px;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="dark-toggle" onclick="toggleDark()">🌙 Dark Mode</button>
+
+    <header>
+      <div class="logo-container">
+        <div class="logo-icon">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h1>Paawservice</h1>
+      </div>
+      <p>Jasa Pembuatan Website & Service Center Profesional</p>
+      <p>Pemilik: m.zaki</p>
+      <a href="https://wa.me/0895405800582" class="btn" target="_blank">
+        Konsultasi via WhatsApp
+      </a>
+    </header>
+
+    <section>
+      <h2>Layanan Kami</h2>
+      <div class="grid">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0"
+            alt=""
+          />
+          <h3>Perbaikan Komputer & Laptop</h3>
+          <p>Service hardware, upgrade SSD/RAM, perbaikan motherboard.</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+            alt=""
+          />
+          <h3>Web Development</h3>
+          <p>Website sekolah, landing page bisnis, toko online modern.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="text-align: center">
+      <h2>Kenapa Pilih Kami?</h2>
+      <p>
+        Harga ramah pelajar & mahasiswa | Teknisi profesional | Respons cepat
+      </p>
+      <br />
+      <a href="https://wa.me/0895405800582" class="btn" target="_blank">
+        Hubungi Sekarang
+      </a>
+    </section>
+
+    <footer>
+      <p>© 2026 Paawservice | Siap Bersaing dengan Brand Besar</p>
+    </footer>
+
+    <a href="https://wa.me/0895405800582" class="floating-wa" target="_blank"
+      >💬</a
+    >
+
+    <script>
+      function toggleDark() {
+        document.body.classList.toggle("dark-mode");
+      }
+
+      // Scroll animation
+      const cards = document.querySelectorAll(".card");
+      window.addEventListener("scroll", () => {
+        cards.forEach((card) => {
+          const cardTop = card.getBoundingClientRect().top;
+          if (cardTop < window.innerHeight - 100) {
+            card.classList.add("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
